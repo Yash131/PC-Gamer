@@ -1,0 +1,21 @@
+html{
+    height: 100%;
+}
+img{
+    filter: blur(2px);
+}
+.carousel-caption{
+    font-size: 50px;
+}
+.card-footer{
+    
+    margin: 10px;
+    border: none;
+    background-color: rgb(214, 196, 163);
+    
+}
+@media ( max-width: 659px){
+    .carousel-caption{
+        font-size: xx-large;
+    };
+}

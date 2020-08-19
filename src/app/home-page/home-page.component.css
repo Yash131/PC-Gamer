@@ -1,0 +1,69 @@
+
+#cardImg{
+    width: 100%;
+    height: 370px;
+    border-bottom: 2px solid black;
+}
+/* #slider{
+    /* border: 4px solid red; }*/
+
+#arrow{
+    box-shadow: 0 0 60px inset black;
+}
+
+#joinOurForce{
+    font-weight: bold;
+}
+
+#joinOurForce:hover{
+
+    background-color: black;
+    color: #f53333;  
+}
+
+
+#gameCard{
+
+    background-color: #f53333;
+    color: white;
+    border: 2px solid black;
+    margin-bottom: 10px;
+    height:580px;
+    width: 300px;
+
+}
+
+#ReadMore{
+    background-color: white;
+    color:#f53333;
+    display: block;
+    margin: auto;
+
+    
+
+}
+#ReadMore:hover{
+    background-color: black;
+    color: #f53333;
+}
+
+/* @media( max-width: 992px){
+   
+}
+    
+
+@media( max-width: 768){
+    #quote{
+        font-size:xx-small;
+    };
+    
+}; */
+
+@media ( max-width: 659px){
+    #quote{
+        font-size: medium;
+    };
+    #gameCard{
+        padding-bottom: 20px;
+    }
+}

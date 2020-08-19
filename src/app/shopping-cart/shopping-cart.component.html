@@ -1,0 +1,56 @@
+<div class="jumbotron" >
+    
+    <blockquote class=" blockquote text-dark text-center align-items-center">
+        <h1 class="display-4">Shopping Cart</h1>
+        <footer class="blockquote-footer">It's an “add to cart” kind of day <i class="fa fa-heart" aria-hidden="true"></i>.</footer>
+      </blockquote>
+
+</div>
+
+<div class="table-responsive" *ngIf="cart$ | async as cart">
+    
+    <table class=" table table-hover ">
+        <thead class="thead-dark">
+            <tr>
+                <th></th>
+                <th>Product</th>
+                <th class="text-center">Quantity</th>
+                <th class="text-right" >Price</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of cart.items">
+         
+                <td></td>
+                <td>{{item.title}}</td>
+                <td >
+                    <product-quantity  [product]='item' [shopping-cart]='cart'></product-quantity>
+                </td>
+                <td class="text-right">
+                    {{item.totalPrice | currency:'USD':true}}
+                </td>
+            </tr>
+        </tbody>
+        
+        <tfoot>
+            <tr>
+              <th> </th>
+              <th>
+                <button type="button" class="btn btn-danger btn-sm " *ngIf="cart.items.length" (click)="clearCart()">
+                       <i class="fa fa-trash-o" aria-hidden="true" style="margin-right: 5px;"></i>Clear Cart
+                </button>
+              </th>
+              <th></th>
+              <th class="text-right">{{ cart.totalPrice | currency:'USD':true }}</th>
+            </tr>
+          </tfoot> 
+    </table>
+</div>
+ <div class="container-fluid text-right" style="margin-bottom: 25px;" *ngIf = " cart$ | async as cart">
+
+    <a *ngIf="cart.items.length" class="btn btn-primary btn-md" routerLink="/check-out">
+        <i class="fa fa-money" aria-hidden="true" style="margin-right: 5px;"></i>
+        Proceed
+    </a>
+ </div>

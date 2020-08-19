@@ -1,0 +1,73 @@
+<!-- ++++++++++++++++++++++++++++Header and Navigation Bar++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<nav id="navHeader" class="" role="navigation">
+    <a class="navbar-brand">
+        <strong id="headerLogo">PC Gamer</strong>
+    </a>
+</nav>
+    
+<nav id="navBar" class="navbar navbar-expand-md  sticky-top">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false">
+        <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav"> 
+     
+        <li class="nav-item" routerLinkActive=" current">
+            <a class="nav-link"  routerLink=''><strong>Home</strong></a>
+        </li>
+        <li class="nav-item" routerLinkActive="active current">
+            <a class="nav-link" routerLink="Products"><strong>Games</strong></a>
+        </li>
+        <li class="nav-item" routerLinkActive="active current">
+            <a class="nav-link" routerLink="AboutUs"><strong>About us</strong></a>
+        </li>
+        <li class="nav-item" routerLinkActive="active current">
+            <a class="nav-link" routerLink="/contactUs"><strong>Contact us</strong></a>
+        </li>
+
+        <li class="nav-item" routerLinkActive="active current">
+            <a class="nav-link" routerLink="/shoppingCart">
+                <strong>
+                         Shopping Cart 
+                </strong>
+                <span class="badge badge-warning badge-pill" *ngIf =" cart$ | async as cart">
+                    {{cart.totalItemsCount}}
+                </span>
+            
+            </a>
+        </li>
+
+        <ng-template #anonymousUser>
+            <li class="nav-item" routerLinkActive="active current">
+                <a class="nav-link" routerLink="login"><strong>Login</strong></a>
+            </li>
+        </ng-template>
+        
+        <li class="nav-item dropdown " *ngIf="appUser; else anonymousUser">
+            <a class="nav-link dropdown-toggle"  data-toggle="dropdown" >
+                <strong id="userName"> 
+                    {{appUser.name}}
+                </strong>
+            </a>
+
+            <div class="dropdown-menu ">
+                <a routerLink="/my/orders" id="dropDownLink" class="dropdown-item" >My Orders</a>
+                    <div  class="dropdown-divider bg"></div>
+                    
+                <ng-container *ngIf="appUser.isAdmin">
+                    <a routerLink="/admin/orders"  id="dropDownLink" class="dropdown-item" >Manage Orders</a>
+                        <div class="dropdown-divider"></div>
+                    <a routerLink="/admin/products" id="dropDownLink" class="dropdown-item">Manage Products</a>
+                        <div class="dropdown-divider"></div>
+                </ng-container>
+                
+                <a routerLink="" id="dropDownLink" class="dropdown-item" (click)='logout()'>Logout</a>
+
+            </div>
+
+        </li>
+    </ul>
+    </div>
+</nav>

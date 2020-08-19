@@ -1,0 +1,35 @@
+<div class="container" >
+    <br>
+    <div>
+        <a routerLink="/admin/products/new" class="btn btn-primary">New Products</a>
+
+    </div>
+<br>
+    <div class="form-group">
+       <input type="text" class="form-control" placeholder="Search..."
+       (keyup)="filter(search.value)" #search>
+       
+    </div>
+
+    <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>Title</th>
+                <th>Price</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of filteredProduct">
+                <td>{{p.title}}</td>
+                <td>{{p.price | currency:"USD":true}}</td>
+                <td class="text-center">
+                    <a class="btn btn-warning" [routerLink]="['admin/products/', p.$key]" >
+                        <i class="fa fa-pencil" aria-hidden="true" style="padding-right: 2px;"></i>
+                        Edit
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,27 @@
+.row{
+    padding: 25px;
+
+}
+
+#f{
+    padding-bottom: 25px;
+}
+
+.card{
+    display: block;
+    margin: auto;
+    border: 3px black solid;
+    background-color: #f53333;
+    color: white;
+
+}
+
+input,span,select{
+border: 1px solid black;
+}
+
+button{
+    font-weight: bold;
+    color: white;
+    border: 1px solid black;
+}

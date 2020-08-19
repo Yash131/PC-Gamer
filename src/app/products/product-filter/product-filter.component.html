@@ -1,0 +1,31 @@
+<!-- <div class="list-group">
+  <a
+    class="list-group-item list-group-item-action"
+    [class.active]="!category"
+    routerLink="/Products"
+    >All Categories</a>
+  <a 
+    *ngFor="let c of categories$ | async" 
+    routerLink="/Products"
+    [queryParams]="{ category: c.$key }"
+    class="list-group-item list-group-item-action"
+    [class.active]="category === c.$key"
+    >
+    {{ c.name }}
+  </a>
+</div> -->
+
+
+<div class="btn-group  mr-3">
+  <button type="button" class="btn btn-secondary" [class.active]="!category"
+  routerLink="/Products">All Categories</button>
+  <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown" >
+    <button class="btn btn-secondary dropdown-toggle-split" ngbDropdownToggle></button>
+    <div class="dropdown-menu" ngbDropdownMenu >
+      <button ngbDropdownItem *ngFor="let c of categories$ | async" 
+      routerLink="/Products"
+      [queryParams]="{ category: c.$key }"
+      [class.active]="category === c.$key" >{{ c.name }}</button>
+    </div>
+  </div>
+</div>

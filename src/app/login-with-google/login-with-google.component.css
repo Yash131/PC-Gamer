@@ -1,0 +1,48 @@
+
+#bodyBackground{
+ 
+    background-image: url("K:\CoachingStuff\Angular\NEW-PCGamer\src\assets\images\game-of-thrones-background-full-hd-1080p-383339.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-size: cover;
+    background-color: black;
+}
+.container{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+#loginCard{
+    display: block;
+    margin: auto;
+    background: black;
+    border: #f53333 3px solid;
+    color: white;
+
+}
+#loginFace{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    image-resolution: inherit;
+}
+a{
+    color: #f53333;
+    text-decoration: none;
+    
+}
+#loginButton{
+    padding: 10px 10px;
+    align-items: center;
+    background-color: black;
+    color: #f53333;
+    display: block;
+    margin: auto;
+    font-size: 20px;
+    font-weight: bold;
+    border: 0.5px #f53333 solid ;
+}
+
+
+
+

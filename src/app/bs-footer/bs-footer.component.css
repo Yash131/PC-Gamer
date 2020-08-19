@@ -1,0 +1,48 @@
+
+
+.footer{
+    background-color: black;
+    color: white;
+}
+#QuickLinks{
+    margin-top: 20px;
+
+    font-size: larger;
+}
+#QuickLinks a{
+    text-decoration: none;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.footer a{
+    text-decoration: none;
+
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #f53333;
+}
+
+#divider{
+background-color: #f53333;
+margin: 20px 30% 20px 30%;
+
+}
+#divider:hover{
+
+    box-shadow: 0 0 10px 5px #f53333;
+}
+.active{
+    background-color: black;
+    opacity: 0.8;
+    
+}
+.active:hover{
+    
+    color: red;
+}
+@media( max-width: 450px){
+
+    #QuickLinks{
+        align-items: center;
+    }
+}

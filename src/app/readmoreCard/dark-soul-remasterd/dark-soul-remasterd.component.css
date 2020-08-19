@@ -1,0 +1,22 @@
+.card{
+    margin: 5px;
+}
+
+p{
+    text-align: center;
+}
+
+@media ( max-width: 659px){
+    #quote{
+        font-size: medium;
+    };
+}
+.container{
+    margin-bottom: 20px;
+}
+
+hr{
+    color: black;
+    box-shadow: red 0 0 3px 0; 
+
+}

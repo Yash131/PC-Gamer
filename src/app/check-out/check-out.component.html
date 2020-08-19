@@ -1,0 +1,14 @@
+<div class="jumbotron text-center" style="margin: 25px 0; ">
+  <h1 class="display-5" ><strong>Shipping Details</strong></h1>
+</div>
+
+<div class="row" style="margin: 0;" *ngIf="cart$ | async as cart">
+  <div style="margin-bottom: 25px; padding: 0 25px;" class=" container col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+    <shipping-form [cart]="cart" ></shipping-form>
+  </div >
+  <div class="container col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 text-center" style="padding: 25px 25px;">
+    <shopping-cart-summary [cart]="cart" ></shopping-cart-summary>
+  </div>
+</div>
+
+
