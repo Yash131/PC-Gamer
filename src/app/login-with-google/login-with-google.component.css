@@ -1,7 +1,7 @@
 
 #bodyBackground{
  
-    background-image: url("\assets\images\game-of-thrones-background-full-hd-1080p-383339.jpg");
+    background-image: url(".\assets\images\game-of-thrones-background-full-hd-1080p-383339.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: local;
